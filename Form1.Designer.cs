@@ -28,28 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            browseButton = new Button();
             dataGridView1 = new DataGridView();
             textBox1 = new TextBox();
-            label1 = new Label();
-            button2 = new Button();
+            filePathLabel = new Label();
+            countButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // browseButton
             // 
-            button1.Location = new Point(86, 31);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            browseButton.Location = new Point(52, 31);
+            browseButton.Name = "browseButton";
+            browseButton.Size = new Size(107, 23);
+            browseButton.TabIndex = 1;
+            browseButton.Text = "Browse";
+            browseButton.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(32, 114);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(349, 207);
             dataGridView1.TabIndex = 1;
             // 
@@ -60,36 +63,36 @@
             textBox1.Size = new Size(295, 23);
             textBox1.TabIndex = 2;
             // 
-            // label1
+            // filePathLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(32, 78);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 3;
-            label1.Text = "label1";
+            filePathLabel.AutoSize = true;
+            filePathLabel.Location = new Point(32, 78);
+            filePathLabel.Name = "filePathLabel";
+            filePathLabel.Size = new Size(55, 15);
+            filePathLabel.TabIndex = 3;
+            filePathLabel.Text = "File Path:";
             // 
-            // button2
+            // countButton
             // 
-            button2.Location = new Point(267, 31);
-            button2.Name = "button2";
-            button2.Size = new Size(114, 23);
-            button2.TabIndex = 4;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            countButton.Location = new Point(240, 31);
+            countButton.Name = "countButton";
+            countButton.Size = new Size(114, 23);
+            countButton.TabIndex = 3;
+            countButton.Text = "Count";
+            countButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(427, 348);
-            Controls.Add(button2);
-            Controls.Add(label1);
+            Controls.Add(countButton);
+            Controls.Add(filePathLabel);
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
-            Controls.Add(button1);
+            Controls.Add(browseButton);
             Name = "Form1";
-            Text = "Form1";
+            Text = "File Count Reporter";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -97,10 +100,10 @@
 
         #endregion
 
-        private Button button1;
+        private Button browseButton;
         private DataGridView dataGridView1;
         private TextBox textBox1;
-        private Label label1;
-        private Button button2;
+        private Label filePathLabel;
+        private Button countButton;
     }
 }
