@@ -30,7 +30,7 @@
         {
             browseButton = new Button();
             dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
+            folderPathTextBox = new TextBox();
             filePathLabel = new Label();
             countButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -44,6 +44,7 @@
             browseButton.TabIndex = 1;
             browseButton.Text = "Browse";
             browseButton.UseVisualStyleBackColor = true;
+            browseButton.Click += browseButton_Click;
             // 
             // dataGridView1
             // 
@@ -56,12 +57,12 @@
             dataGridView1.Size = new Size(349, 207);
             dataGridView1.TabIndex = 1;
             // 
-            // textBox1
+            // folderPathTextBox
             // 
-            textBox1.Location = new Point(86, 70);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(295, 23);
-            textBox1.TabIndex = 2;
+            folderPathTextBox.Location = new Point(86, 70);
+            folderPathTextBox.Name = "folderPathTextBox";
+            folderPathTextBox.Size = new Size(295, 23);
+            folderPathTextBox.TabIndex = 2;
             // 
             // filePathLabel
             // 
@@ -80,6 +81,7 @@
             countButton.TabIndex = 3;
             countButton.Text = "Count";
             countButton.UseVisualStyleBackColor = true;
+            countButton.Click += countButton_Click;
             // 
             // Form1
             // 
@@ -88,7 +90,7 @@
             ClientSize = new Size(427, 348);
             Controls.Add(countButton);
             Controls.Add(filePathLabel);
-            Controls.Add(textBox1);
+            Controls.Add(folderPathTextBox);
             Controls.Add(dataGridView1);
             Controls.Add(browseButton);
             Name = "Form1";
@@ -102,7 +104,7 @@
 
         private Button browseButton;
         private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private TextBox folderPathTextBox;
         private Label filePathLabel;
         private Button countButton;
     }
